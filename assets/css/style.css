@@ -20,27 +20,72 @@ html {
 #nav {
 
 }
+#nav > li {
+    display: inline-block;
+}
 
 #nav li {
-    display: inline-block;
+    position: relative;
    
 }
 
-#nav li a {
-    line-height: 46.5px;
-    text-decoration: none;
+#nav > li > a {
     color: #fff;
-    padding: 0 24px;
 }
 
-#nav li:hover a{
-    color: #000!important;
-    background-color: #ccc!important;
+#nav li a {
+    line-height: 46px;
+    text-decoration: none;
+    padding: 0 24px;
     display: inline-block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav  .subnav  li:hover > a{
+    color: #000!important;
+    background-color: #ccc;
 }
 
 #nav .subnav {
     display: none;
+    list-style-type: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    display: block;
+    padding: 0 18px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 12px;
+    margin-left: 2px;
+}
+
+
+#header .search-btn:hover {
+    color: #fff!important;
+    background-color: #f44336!important;
+    cursor: pointer;
+}
+
+#header .search-btn {
+    padding: 0 23px;
+    float: right;
+    line-height: 46px;
+}
+
+#header .search-icon {
+    color: #fff;
 }
 
 #slider{
