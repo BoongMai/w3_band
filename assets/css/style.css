@@ -15,10 +15,15 @@ html {
 #header{
     height: 46.5px;
     background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
 }
 
 #nav {
-
+        display: inline-block;
 }
 #nav > li {
     display: inline-block;
@@ -89,11 +94,38 @@ html {
 }
 
 #slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slide/slide-1.jpg') top center / cover no-repeat;
+    /* Top va center la position cua anh, cover la background size norepeat la lkhong lap lai*/   
+ }
 
-}
+ #slider .text-content {
+     color: #fff;
+    position: absolute;
+    bottom: 38px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    width: 100%;
+    /* right: 0;
+    left: 0; */
+    text-align: center;
+ }
+
+ #slider .text-heading {
+    font-weight: 100;
+    font-size: 24px;
+ }
+
+ #slider .text-description {
+     margin-top: 25px;
+    font-size: 15px;
+ }
+
 
 #content{
-
+   
 }
 
 #footer{
