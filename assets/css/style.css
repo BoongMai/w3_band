@@ -128,6 +128,36 @@ html {
    
 }
 
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    /* left right auto => ra giữa */
+    padding: 64px 16px ;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+    /* opacity độ mờ chữ đi từ 0 -> 1 */
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
 #footer{
 
 }
