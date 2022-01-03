@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+/* xử lý lỗi float không ôm  */
 .clear {
     clear: both;
 }
@@ -224,6 +224,67 @@ html {
     line-height: 24px;
     margin-top: -3px;
     /* line-height thi cang tren duoi */
+}
+
+
+/* Place */
+.places-list {
+/* quy tắc trên phải dưới trái */
+    margin: 30px -8px 46px;
+}
+
+.place-item {
+    float: left;
+    width: calc(100% /3);
+    padding: 0px 10px;
+    
+}
+
+.place-body {
+    background-color: white;
+    padding: 16px 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-weight: 600;
+}
+
+.place-time {
+    opacity: 0.6;
+    margin-top: 15px;
+}
+
+.place-img:hover{
+    /* opacity để mờ ảnh khi hover */
+    opacity: 0.8;
+}
+
+.place-img{
+    /* sử dụng display block khi inline đứng cạnh block tạo ra khoảng trống */
+    display: block;
+    width: 100%;
+}
+
+.place-dicription {
+    color: #000;
+    margin-top: 15px;
+    line-height: 1.4;
+    
+}
+
+.place-buy-btn {
+    color:white;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.place-buy-btn:hover {
+    color: black;
+    background-color: #ccc;
 }
 
 #footer{
