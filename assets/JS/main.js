@@ -26,5 +26,5 @@ ta có thể lấy ra element bằng cách truyền giá trị index.
 // var boxElement = document.getElementsByClassName('box')[0]
 // console.log(boxElement);
 
-// var childrenElements =
+// // var childrenElements =
 // console.log(boxElement.getElementsByClassName('children')[1]);
