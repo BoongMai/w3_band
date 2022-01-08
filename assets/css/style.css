@@ -1,22 +1,67 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+
 /* xử lý lỗi float không ôm  */
+
 .clear {
     clear: both;
 }
+
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main{
-
+.text-center {
+    text-align: center;
 }
 
-#header{
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding: 0px 8px;
+}
+
+.col-third {
+    width: calc(100%/3);
+}
+
+.col-half {
+    width: 50%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.col .col-full {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#main {}
+
+#header {
     height: 46.5px;
     background-color: black;
     position: fixed;
@@ -26,19 +71,35 @@ html {
     z-index: 1;
 }
 
-#nav {
-        display: inline-block;
+.btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
 }
-#nav > li {
+
+.btn:hover {
+    color: black;
+    background-color: #ccc;
+    border: 0;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
     display: inline-block;
 }
 
 #nav li {
     position: relative;
-   
 }
 
-#nav > li > a {
+#nav>li>a {
     color: #fff;
 }
 
@@ -53,8 +114,8 @@ html {
     display: block;
 }
 
-#nav > li:hover > a,
-#nav  .subnav  li:hover > a{
+#nav>li:hover>a,
+#nav .subnav li:hover>a {
     color: #000!important;
     background-color: #ccc;
 }
@@ -80,7 +141,6 @@ html {
     margin-left: 2px;
 }
 
-
 #header .search-btn:hover {
     color: #fff!important;
     background-color: #f44336!important;
@@ -97,16 +157,16 @@ html {
     color: #fff;
 }
 
-#slider{
+#slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
     background: url('/assets/img/slide/slide-1.jpg') top center / cover no-repeat;
-    /* Top va center la position cua anh, cover la background size norepeat la lkhong lap lai*/   
- }
+    /* Top va center la position cua anh, cover la background size norepeat la lkhong lap lai*/
+}
 
- #slider .text-content {
-     color: #fff;
+#slider .text-content {
+    color: #fff;
     position: absolute;
     bottom: 38px;
     /* left: 50%; */
@@ -115,29 +175,26 @@ html {
     /* right: 0;
     left: 0; */
     text-align: center;
- }
+}
 
- #slider .text-heading {
+#slider .text-heading {
     font-weight: 100;
     font-size: 24px;
- }
-
- #slider .text-description {
-     margin-top: 25px;
-    font-size: 15px;
- }
-
-
-#content{
-   
 }
+
+#slider .text-description {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#content {}
 
 #content .content-section {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
     /* left right auto => ra giữa */
-    padding: 64px 16px ;
+    padding: 64px 16px 112px;
 }
 
 #content .section-heading {
@@ -146,6 +203,7 @@ html {
     text-align: center;
     letter-spacing: 2px;
 }
+
 #content .section-sub-heading {
     font-size: 15px;
     text-align: center;
@@ -168,18 +226,12 @@ html {
     margin-top: 48px;
 }
 
-#content .teamates-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
-
 #content .teamates-name {
     font-size: 15px;
     margin-bottom: 15px
 }
 
-#content .teamates-img  {
+#content .teamates-img {
     border-radius: 4px;
     width: 154px;
 }
@@ -188,10 +240,9 @@ html {
     background-color: #000;
 }
 
-.text-white { 
-    color: white !important; 
+.text-white {
+    color: white !important;
 }
-
 
 .tour-section .ticket-list {
     margin-top: 40px;
@@ -201,7 +252,7 @@ html {
 .ticket-list li {
     font-size: 15px;
     padding: 8px 16px;
-    border-bottom:1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
     color: #757575;
     list-style-type: none;
 }
@@ -228,16 +279,14 @@ html {
 
 
 /* Place */
+
 .places-list {
-/* quy tắc trên phải dưới trái */
-    margin: 30px -8px 46px;
+    /* quy tắc trên phải dưới trái */
+    margin-top: 30px;
 }
 
 .place-item {
-    float: left;
     width: calc(100% /3);
-    padding: 0px 10px;
-    
 }
 
 .place-body {
@@ -255,12 +304,12 @@ html {
     margin-top: 15px;
 }
 
-.place-img:hover{
+.place-img:hover {
     /* opacity để mờ ảnh khi hover */
     opacity: 0.8;
 }
 
-.place-img{
+.place-img {
     /* sử dụng display block khi inline đứng cạnh block tạo ra khoảng trống */
     display: block;
     width: 100%;
@@ -270,35 +319,40 @@ html {
     color: #000;
     margin-top: 15px;
     line-height: 1.4;
-    
 }
 
-.place-buy-btn {
-    color:white;
-    background-color: black;
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    margin-bottom: 14px;
+}
+
+#footer .socials-list a {
+    font-size: 24px;
     text-decoration: none;
-    padding: 10px 18px;
-    display: inline-block;
-    margin-top: 15px;
+    color: #000;
+    opacity: 0.7;
 }
 
-.place-buy-btn:hover {
-    color: black;
-    background-color: #ccc;
+#footer .socials-list a:hover {
+    opacity: 0.4;
 }
 
-#footer{
-
+#footer a {
+    font-size: 15px;
+    text-decoration: none;
 }
 
-
-.modal { 
+.modal {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.6);
     /* cho nội dung ra giữa */
     display: none;
     align-items: center;
@@ -309,16 +363,16 @@ html {
     padding: 16px;
 }
 
-
 .modal-containter {
     max-width: calc(100% - 32px);
     background-color: #fff;
     width: 900px;
     min-height: 200px;
     position: relative;
+    animation: modalFaceIn ease .4s;
 }
 
-.modal-bagIcons{
+.modal-bagIcons {
     margin-right: 16px;
 }
 
@@ -363,8 +417,8 @@ html {
 }
 
 .buy-ticket:hover {
-opacity: 0.8;
-color: #000;
+    opacity: 0.8;
+    color: #000;
 }
 
 .buy-ticket {
@@ -389,6 +443,54 @@ color: #000;
 .modal.open {
     display: flex;
 }
-.modal-btn {
 
+.modal-btn {}
+
+
+/* Contact */
+
+.contact-content {
+    margin-top: 46px;
+}
+
+.contact-info {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #CCC;
+    width: 100%;
+}
+
+
+/* Map */
+
+.map-section img {
+    width: 100%;
+}
+
+
+/* tạo chuyển động bằng cách tạo một hàm sau đó dùng from và to 
+sau đó lấy tên hàm vừa tạo gan71 vào cho element muốn tạo animate bằng thẻ 
+animate : <tên hàm > <cách xuất hiện> <số giây hoàn thành sự kiện>
+*/
+
+@keyframes modalFaceIn {
+    from {
+        transform: translateY(-140px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
