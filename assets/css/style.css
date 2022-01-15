@@ -214,7 +214,7 @@ html {
     /* left right auto => ra giữa */
     padding: 64px 16px 112px;
     padding-left: 8px;
-    padding-right: 16px;
+    padding-right: 8px;
 }
 
 #content .section-heading {
@@ -302,7 +302,7 @@ html {
 
 .places-list {
     /* quy tắc trên phải dưới trái */
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 .place-item {

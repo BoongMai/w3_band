@@ -28,6 +28,21 @@
         color: #fff;
         padding: 5px 0px;
     }
+    #content .teammate-items {
+        margin-top: 30px;
+    }
+    .teammate-items {
+        width: 100%;
+    }
+    .place-heading {
+        text-align: center;
+    }
+    #content .teamates-img {
+        width: 60%;
+    }
+    .s-col-full {
+        width: 100%;
+    }
 }
 
 
