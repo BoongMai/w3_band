@@ -16,11 +16,17 @@
     #nav>li:first-child {
         display: inline-block;
     }
-    #nav .subnav {
-        position: relative;
-    }
     .search-icon {
         display: none;
+    }
+    #nav .subnav {
+        padding-left: 30px;
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 0px;
     }
 }
 
