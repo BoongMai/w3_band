@@ -62,7 +62,7 @@ html {
 #main {}
 
 #header {
-    height: 46.5px;
+    height: 46px;
     background-color: black;
     position: fixed;
     top: 0;
@@ -107,6 +107,10 @@ html {
     line-height: 46px;
     text-decoration: none;
     padding: 0 24px;
+    display: block;
+}
+
+#nav:first-child>a {
     display: inline-block;
 }
 
@@ -141,18 +145,31 @@ html {
     margin-left: 2px;
 }
 
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000!important;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc!important;
+}
+
 #header .search-btn:hover {
     color: #fff!important;
     background-color: #f44336!important;
     cursor: pointer;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 0 23px;
     float: right;
     line-height: 46px;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
 }
@@ -191,10 +208,13 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     /* left right auto => ra giữa */
     padding: 64px 16px 112px;
+    padding-left: 8px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -332,6 +352,7 @@ html {
 
 #footer .socials-list a {
     font-size: 24px;
+    padding: 0px 2px;
     text-decoration: none;
     color: #000;
     opacity: 0.7;

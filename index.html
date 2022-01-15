@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fontIcon/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="/assets/img/Favicon/theband.png" type="image/x-icon">
 </head>
 
 <body>
@@ -15,20 +17,20 @@
         <div id="header">
             <!-- Begin Nav -->
             <ul id="nav">
-                <li><a>HOME</a></li>
-                <li><a>BAND</a></li>
-                <li><a>TOUR</a></li>
-                <li><a>CONTACT</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="#band">BAND</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
 
                 <li>
-                    <a>
+                    <a href="#">
                         MORE
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a>Merchandise</a></li>
-                        <li><a>Extras</a></li>
-                        <li><a>Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,6 +40,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search">
                 </i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: Search -->
         </div>
@@ -54,7 +60,7 @@
         <div id="content">
 
             <!-- Begin: section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
@@ -85,7 +91,7 @@
             <!-- End: section -->
 
             <!-- Begin: Tour -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading tour-section text-white">Remember to book your tickets!</p>
@@ -136,7 +142,7 @@
             <!-- End: Tour -->
 
             <!-- Begin: contact -->
-            <div class="content-section ">
+            <div id="contact" class="content-section ">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
@@ -188,6 +194,7 @@
             <p>Power by <a href="">Thanh Dy</a></p>
         </div>
         <!-- End:Footer -->
+
 
         <!-- Begin: Modal Buy Ticket -->
         <div class="modal js-modal">

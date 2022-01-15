@@ -34,16 +34,17 @@ const model = document.querySelector('.js-modal')
 const modelClose = document.querySelector('.js-close-modal')
 const modelContaniner = document.querySelector('.js-modal-contaniner')
 
-function showModal(){
+function showModal() {
     model.classList.add('open')
 }
+
 
 function closeModal() {
     model.classList.remove('open')
 }
 
 
-for (const buyBtn of buyBtns){
+for (const buyBtn of buyBtns) {
     buyBtn.addEventListener('click', showModal)
 }
 
@@ -53,13 +54,47 @@ model.addEventListener('click', closeModal)
 
 
 // event là một sự kiện, stopPropagation là dửng nổi bọt đến các phần tử bên trong
-modelContaniner.addEventListener('click', function(event){
-    event.stopPropagation()
-})
-/**
- * Truy suất vào nơi cần nhận sự kiện sau đó tạo vòng lập để lấy từng element Node
- * riêng lẽ và gán vào giá trị mới, sau đó dùng giá trị mới với từng element
- * riêng lẽ để dùng  hàm addEventListener.
- * -
- */
-// console.log(buyBtns);
+modelContaniner.addEventListener('click', function(e) {
+        e.stopPropagation()
+    })
+    /**
+     * Truy suất vào nơi cần nhận sự kiện sau đó tạo vòng lập để lấy từng element Node
+     * riêng lẽ và gán vào giá trị mới, sau đó dùng giá trị mới với từng element
+     * riêng lẽ để dùng  hàm addEventListener.
+     * -
+     */
+    // console.log(buyBtns);
+
+var headerElement = document.getElementById('header')
+var mobileMenu = document.getElementById('mobile-menu')
+var headerHeight = headerElement.clientHeight
+
+
+// dong mo menu
+mobileMenu.onclick = function() {
+    var isClosed = headerElement.clientHeight === headerHeight;
+    if (isClosed) {
+        headerElement.style.height = "auto";
+    } else {
+        headerElement.style.height = null
+    }
+}
+
+// Tu dong dong khi mo menu
+
+var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+
+for (var i = 0; i < menuItems.length; i++) {
+    var menuItem = menuItems[i];
+    console.log(menuItem.nextElementSibling);
+
+    menuItem.onclick = function() {
+        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+        if (isParentMenu) {
+            event.preventDefault()
+        } else {
+            headerElement.style.height = null
+
+        }
+    }
+}
